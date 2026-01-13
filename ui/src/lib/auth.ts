@@ -65,7 +65,8 @@ export const ensureDbAndUserModel = async () => {
 };
 
 export const getSessionFromHeaders = async () => {
-  const cookieHeader = headers().get("cookie");
+  const hdrs = await headers();
+  const cookieHeader = hdrs.get("cookie");
   if (!cookieHeader) return null;
   const token = cookieHeader
     .split(";")
