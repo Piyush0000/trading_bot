@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
 
 const MONGO_URI =
-  process.env.MONGO_URI ??
-  "mongodb+srv://piyushrathore:piyushcodes@cluster0.wiqfcjk.mongodb.net/tradingbot?retryWrites=true&w=majority&appName=Cluster0";
+  process.env.MONGO_URI ;
 
 if (!MONGO_URI) {
   throw new Error("MONGO_URI env is required");
